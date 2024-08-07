@@ -1,0 +1,12 @@
+[
+    {
+        "title": "First Blog Post",
+        "description": "This is the description of the first blog post.",
+        "link": "https://example.com/first-blog"
+    },
+    {
+        "title": "Second Blog Post",
+        "description": "This is the description of the second blog post.",
+        "link": "https://example.com/second-blog"
+    }
+]

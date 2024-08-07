@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("partials/head")%>
+  <body>
+    <%- include("partials/nav") %>
+    <div class="container mt-5">
+      <h1 class="mb-4 text-center"><%= title %></h1>
+      <div class="row">
+        <% users.forEach(user => { %>
+        <div class="col-md-12 mb-4">
+          <div class="about-section border-light shadow-sm p-4">
+            <h2 class="mb-3"><%= user.fname %> <%= user.lname %></h2>
+            <p class="mb-3"><%= user.bio %></p>
+            <div class="d-flex">
+              <a
+                href="<%= user.linkedin %>"
+                class="btn btn-primary btn-custom me-2"
+                target="_blank"
+              >
+                <i class="fab fa-linkedin"></i> LinkedIn
+              </a>
+              <a
+                href="<%= user.github %>"
+                class="btn btn-dark btn-custom"
+                target="_blank"
+              >
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+    <%- include("partials/footer") %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("partials/head")%>
+  <body>
+    <%- include("partials/nav")%>
+    <div class="container mt-4">
+      <h1 class="mb-4">Welcome to My Blog</h1>
+      <!-- Blog posts -->
+      <div class="row">
+        <% blogs.forEach(blog => { %>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><%= blog.title %></h5>
+              <p class="card-text"><%= blog.description %></p>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+
+    <%- include("partials/footer")%>
+  </body>
+</html>
